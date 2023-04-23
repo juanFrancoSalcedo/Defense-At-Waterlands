@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7151fecbc4d0e344a88ddf42606240da, type: 3}
+  m_Name: pies limpios
+  m_EditorClassIdentifier: 
+  nameE: pies limpios
+  description: "descalzos pero ba\xF1adps"
+  image: {fileID: 21300000, guid: e0e13611e68ab0049b7b5b0a6a37a0f8, type: 3}
+  techRequeriment: {fileID: 11400000, guid: 2088988f42a6ff14c98509c638c65012, type: 2}

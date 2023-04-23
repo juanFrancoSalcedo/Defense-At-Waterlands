@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36148a3a174536b449717fa4f0781111, type: 3}
+  m_Name: Breizol
+  m_EditorClassIdentifier: 
+  sptFlag: {fileID: 21300000, guid: 24695bfcfe23ade43afba52caed374af, type: 3}
+  civilizationDescriptionFeatures: 'civilizacion bestial casi imposible de ganar
+
+    -
+    Emborrachar: cuando crea un aldeano, los aldeanos enemigos dejen de trabajar.
+
+    -
+    Caminar ebrio: Todas las unidades tienen un desvio base de 80%
+
+    - La vida
+    es una tombola: si se encuetra cerca a un recurso natural las unidad se curan.'
+  civi:
+    NameCivilization: The Civilization
+  techs:
+  - {fileID: 11400000, guid: 3d96768f69ee1ad48801361676c2e682, type: 2}
+  - {fileID: 11400000, guid: 13a6a66c22eb2d94685d45c2ad381c4c, type: 2}
+  - {fileID: 11400000, guid: c24d74c8a4419a547a719c52428bd178, type: 2}
+  - {fileID: 11400000, guid: ee23f865ec592b446b06dc3d7b734b2e, type: 2}
+  - {fileID: 11400000, guid: b0f00138635db9f4aa3ebab9e4745140, type: 2}
+  - {fileID: 11400000, guid: 073a5599b7aa6244ca9a2426fa0c90ae, type: 2}
+  - {fileID: 11400000, guid: ab2252e95283c5f4498885b710059bcc, type: 2}
+  - {fileID: 11400000, guid: e2ad1676675b0be4e9a6a1d49a91da5b, type: 2}
+  - {fileID: 11400000, guid: 920af0510c110404fbeb5b08fde83aba, type: 2}
+  - {fileID: 11400000, guid: 5be9334e17cb2114cb85a2b1d74d4bc4, type: 2}
+  - {fileID: 11400000, guid: 1d8acb341d6764c43b9da370a946d3f3, type: 2}
+  - {fileID: 11400000, guid: db660843cddf4c243b8e9df309e66583, type: 2}
+  - {fileID: 11400000, guid: 50935250662039543a572a9e17202623, type: 2}
+  - {fileID: 11400000, guid: 9f3c45d75afb8cb47b8e051f5169dd94, type: 2}
+  - {fileID: 11400000, guid: a467995696f025843afda19eb23640b7, type: 2}
+  - {fileID: 11400000, guid: b7ed51557bd92e44092a88f0daaa3a47, type: 2}
+  - {fileID: 11400000, guid: 217ccf6693a14fc40bb368f58b8f82a6, type: 2}
+  - {fileID: 11400000, guid: 20e0ebbc44893024f9d95627c1407364, type: 2}
+  - {fileID: 11400000, guid: 6566d44d836c0da4d9bc5d8f539a2fc7, type: 2}
+  - {fileID: 11400000, guid: 16a4f1ba6010e1546bab1053bb6aa4f9, type: 2}
+  - {fileID: 11400000, guid: c5b5cfd588195374aa3977ed6906acf3, type: 2}
+  - {fileID: 11400000, guid: 29a5c233cef770d42b17a55f697ddee8, type: 2}
+  - {fileID: 11400000, guid: 53cdc35067f11e048918d36ed661aeaa, type: 2}
+  - {fileID: 11400000, guid: 0ccc82b41226ca543bc2812dbc76058c, type: 2}
+  - {fileID: 11400000, guid: dbd152df312cc1f44a7f8fa957007a81, type: 2}
+  - {fileID: 11400000, guid: 2ee17fb07b19c944abb3194df613e721, type: 2}
+  - {fileID: 11400000, guid: 4d56bbbb713640048b16b1b2a0264c70, type: 2}
+  - {fileID: 11400000, guid: 3bd5b1fafeaa25644bf897ab12a15839, type: 2}
+  - {fileID: 11400000, guid: ebe887316d18d2c498a32549efb6939b, type: 2}
+  - {fileID: 11400000, guid: 148d53c15cbe89b4fb260d6f62097337, type: 2}
+  - {fileID: 11400000, guid: 40727afc371394844b8f3f957fee5d48, type: 2}
+  - {fileID: 11400000, guid: e6300639d8c2e2848b7eb19e95cf8574, type: 2}
+  - {fileID: 11400000, guid: 2c53261877d392946923a21fb98e1ef0, type: 2}
+  progress:
+  - {fileID: 11400000, guid: 47e6003c32e25c84ba7073aeb3e41677, type: 2}
+  - {fileID: 11400000, guid: 0caa6ebaa9c4648459d85af9691d25ba, type: 2}
+  - {fileID: 11400000, guid: 835474bb506a4224488bf0ad4500694e, type: 2}
+  - {fileID: 11400000, guid: 69d2c49855047204a8fa408c9646f1a4, type: 2}
+  - {fileID: 11400000, guid: 2088988f42a6ff14c98509c638c65012, type: 2}
+  - {fileID: 11400000, guid: 1589ded998d47bf4ca79574805a6a9b1, type: 2}
+  - {fileID: 11400000, guid: 11637f1b7dd8d1b4ba81b5fcb6ae5bef, type: 2}
+  - {fileID: 11400000, guid: e79e60ebdf302064098b2219db7ce93a, type: 2}
+  - {fileID: 11400000, guid: 4a7edbec9b1be934698b75154cb4bef7, type: 2}
+  - {fileID: 11400000, guid: cc5f6426a213f644da6d944ab9dd7c5e, type: 2}
+  - {fileID: 11400000, guid: 56ba7e3da336f1b418f0a3a168e76359, type: 2}
+  - {fileID: 11400000, guid: ab6fc470e0a2a0e4db8db1961510bda2, type: 2}
+  mobileUnits:
+  - {fileID: 11400000, guid: 67a4aa08d4a66894f81f243ff9aa9093, type: 2}
+  buildings:
+  - {fileID: 11400000, guid: f4a817ad3b1e6f842860e936ab36ea61, type: 2}

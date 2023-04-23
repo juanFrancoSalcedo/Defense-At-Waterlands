@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd353fe48640ce40ba94ed2dae7a9a5, type: 3}
+  m_Name: Eco Hera 11
+  m_EditorClassIdentifier: 
+  techRequeriment: {fileID: 11400000, guid: 4a7edbec9b1be934698b75154cb4bef7, type: 2}
+  nameTech: Edad cuatro
+  description: epico
+  image: {fileID: 21300000, guid: 0a14cb61d1d07af4ea3de6c37c4cd05c, type: 3}
