@@ -6,9 +6,7 @@ using UnityEngine;
 
 public class BuildingTreeController : TreeController
 {
-    [SerializeField] private CivilizationInfo prototype = null;
-    [SerializeField] private RowBuildingTree[] rows = null;
-    private void Start() => SetCivi(prototype);
+     [SerializeField] private RowBuildingTree[] rows = null;
 
     public override void SetCivi(CivilizationInfo civi)
     {

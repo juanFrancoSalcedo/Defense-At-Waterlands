@@ -463,7 +463,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 60
   m_Depth: -1
   m_CullingMask:
@@ -487,14 +487,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.36964384, y: 0.23911762, z: -0.09904577, w: 0.89239913}
-  m_LocalPosition: {x: -41.5, y: 45, z: -24.6}
+  m_LocalRotation: {x: 0.48591337, y: 0.3599309, z: -0.22930126, w: 0.76273125}
+  m_LocalPosition: {x: -30, y: 60, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 65, y: 50.525, z: 0}
 --- !u!1 &998200063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,13 +1033,14 @@ MonoBehaviour:
     amount: 2
   cameraMovement:
     amount: 0.2
+    height: 0
   ortographicSettings:
     <RotationCamera>k__BackingField: {x: 45, y: 30, z: 0}
     <InitPosition>k__BackingField: {x: 0, y: 60, z: 0}
   perspectiveSettings:
-    <RotationCamera>k__BackingField: {x: 55, y: 60, z: 0}
-    <InitPosition>k__BackingField: {x: 55, y: 45, z: 0}
-  isOrtographic: 1
+    <RotationCamera>k__BackingField: {x: 65, y: 50, z: 0}
+    <InitPosition>k__BackingField: {x: -30, y: 60, z: -30}
+  isOrtographic: 0
 --- !u!1 &2017491642
 GameObject:
   m_ObjectHideFlags: 0

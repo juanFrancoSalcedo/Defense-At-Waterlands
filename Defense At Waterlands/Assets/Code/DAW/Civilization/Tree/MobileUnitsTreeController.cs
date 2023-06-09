@@ -7,9 +7,7 @@ namespace DAW.TechTree
 {
     public class MobileUnitsTreeController : TreeController
     {
-        [SerializeField] private CivilizationInfo prototype = null;
         [SerializeField] private RowMobileUnitTree[] rows = null;
-        private void Start() => SetCivi(prototype);
 
         public override void SetCivi(CivilizationInfo civi)
         {
