@@ -2,40 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraManager : MonoBehaviour
+
+namespace DAW.CameraMovement
 {
-    [SerializeField] private Transform cam = null;
-    [SerializeField] ZoomCamera cameraZoom = new ZoomCamera();
-    [SerializeField] MovementCamera cameraMovement = new MovementCamera();
-    [SerializeField] CameraOrtographic ortographicSettings = new CameraOrtographic();
-    [SerializeField] CameraPerspective perspectiveSettings = new CameraPerspective();
-    [SerializeField] private bool isOrtographic = true;
-
-    private new Camera camera = null;
-
-    private void Start() => camera = cam.GetComponent<Camera>();
-
-    void Update()
+    public class CameraManager : MonoBehaviour
     {
-        cameraZoom.CalculateZoom(camera);
-        cameraMovement.CalculateMovement(cam);
-    }
+        [SerializeField] private Transform cam = null;
+        [SerializeField] ZoomCamera cameraZoom = new ZoomCamera();
+        [SerializeField] MovementCamera cameraMovement = new MovementCamera();
+        [SerializeField] CameraOrtographic ortographicSettings = new CameraOrtographic();
+        [SerializeField] CameraPerspective perspectiveSettings = new CameraPerspective();
+        [SerializeField] private bool isOrtographic = true;
 
-    [ContextMenu("Set camera")]
-    public void SetCamera() 
-    {
-        if(!camera)
+        private new Camera camera = null;
+
+        private void Start()
+        {
             camera = cam.GetComponent<Camera>();
-        CameraDAW cameraNew = (isOrtographic) ? ortographicSettings : perspectiveSettings;
-        cameraNew.SetCamera(camera);
-    }
+            cameraMovement.height = cam.transform.position.y;
+        }
 
+        void Update()
+        {
+            cameraMovement.CalculateMovement(cam);
+            cameraZoom.CalculateZoom(camera,cameraMovement);
+        }
+
+        [ContextMenu("Set camera")]
+        public void SetCamera()
+        {
+            if (!camera)
+                camera = cam.GetComponent<Camera>();
+            CameraDAW cameraNew = (isOrtographic) ? ortographicSettings : perspectiveSettings;
+            cameraNew.SetCamera(camera);
+        }
+    }
 
     [System.Serializable]
-    public class ZoomCamera 
+    public class ZoomCamera
     {
         [SerializeField] private float amount;
-        public void CalculateZoom(Camera cam) 
+        public void CalculateZoom(Camera cam, MovementCamera movementCam)
         {
             var buffer = cam.transform.position;
             if (cam.orthographic)
@@ -45,9 +52,8 @@ public class CameraManager : MonoBehaviour
                 cam.orthographicSize = buffer.y;
             }
             else
-            { 
-                buffer.y -= Input.mouseScrollDelta.y * amount;
-                cam.transform.position = buffer;
+            {
+                movementCam.height += Input.mouseScrollDelta.y * amount;
             }
         }
     }
@@ -56,26 +62,29 @@ public class CameraManager : MonoBehaviour
     public class MovementCamera
     {
         [SerializeField] private float amount = 0;
-        private float constraint = 10;
+        private float constraint = 20;
+        public float height = 0;
         public void CalculateMovement(Transform target)
         {
             var buffer = target.transform.position;
+            //get direction by rigth position
+            Vector3 right = target.TransformDirection(Vector3.right);
+            //get direction by forward position
+            Vector3 forward = target.TransformDirection(Vector3.forward);
+
             if (Input.mousePosition.x > Screen.width - constraint)
-            {
-                buffer.x += amount;
-            }
+                buffer += (right * amount);
             if (Input.mousePosition.x < constraint)
-            {
-                buffer.x -= amount;
-            }
+                buffer -= (right * amount);
             if (Input.mousePosition.y > Screen.height - constraint)
             {
-                buffer.z += amount;
+                //multiplied by two
+                buffer += (forward * amount * 2);
             }
             if (Input.mousePosition.y < constraint)
-            {
-                buffer.z -= amount;
-            }
+                buffer -= (forward * amount * 2);
+            // freeze de position y because in orthographic this value is altered, this prevent it
+            buffer.y = height;
             target.transform.position = buffer;
         }
     }
@@ -83,7 +92,7 @@ public class CameraManager : MonoBehaviour
     [System.Serializable]
     public class CameraOrtographic : CameraDAW
     {
-        [field: SerializeField] protected override Vector3 RotationCamera { get ; set; }
+        [field: SerializeField] protected override Vector3 RotationCamera { get; set; }
         [field: SerializeField] protected override Vector3 InitPosition { get; set; }
 
         public override void SetCamera(Camera camera)
@@ -93,24 +102,23 @@ public class CameraManager : MonoBehaviour
             camera.transform.rotation = Quaternion.Euler(RotationCamera);
         }
     }
-
     [System.Serializable]
     public class CameraPerspective : CameraDAW
     {
-        [field:SerializeField] protected override Vector3 RotationCamera { get; set; }
+        [field: SerializeField] protected override Vector3 RotationCamera { get; set; }
         [field: SerializeField] protected override Vector3 InitPosition { get; set; }
 
         public override void SetCamera(Camera camera)
         {
             camera.orthographic = false;
-            camera.transform.SetPositionAndRotation(InitPosition,Quaternion.Euler(RotationCamera));
+            camera.transform.SetPositionAndRotation(InitPosition, Quaternion.Euler(RotationCamera));
         }
     }
-
-    public abstract class CameraDAW 
+    public abstract class CameraDAW
     {
         public abstract void SetCamera(Camera camera);
         protected abstract Vector3 RotationCamera { get; set; }
         protected abstract Vector3 InitPosition { get; set; }
     }
+
 }
