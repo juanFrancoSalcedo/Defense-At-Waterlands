@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Defense At Waterlands/Assets/Code/DAW/Gameplay.meta
 guid: 676f8ffcae5bb1041a5f7e8a8cb96bd7
+========
+guid: 9aa71e9b442d07a408cd29d4184a8714
+>>>>>>>> 6eda13344b3ad50d7674cede8ee115287a2ce545:Defense At Waterlands/Assets/_ExternalAssets/RTS Engine/Demo/BuildingExtension/Resources.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

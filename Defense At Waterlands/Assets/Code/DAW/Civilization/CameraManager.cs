@@ -62,7 +62,11 @@ namespace DAW.CameraMovement
     public class MovementCamera
     {
         [SerializeField] private float amount = 0;
+<<<<<<< HEAD
         private float constraint = 20;
+=======
+        private float constraint = 10;
+>>>>>>> 6eda13344b3ad50d7674cede8ee115287a2ce545
         public float height = 0;
         public void CalculateMovement(Transform target)
         {

@@ -1,12 +1,16 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Defense At Waterlands/Assets/Art/GameIcons/technology_icon.png.meta
 guid: 6b9b7c57f84beca4a83492083aaa0f98
+========
+guid: 3613d1d2ff3fa2f46902f12ac3f6a1bc
+>>>>>>>> 6eda13344b3ad50d7674cede8ee115287a2ce545:Defense At Waterlands/Assets/_ExternalAssets/RTS Engine/Core/Resources/Images/gamedevspice_logo.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -23,8 +27,6 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -33,12 +35,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: -1
     aniso: 1
-    mipBias: 0
+    mipBias: -100
     wrapU: 1
     wrapV: 1
+<<<<<<<< HEAD:Defense At Waterlands/Assets/Art/GameIcons/technology_icon.png.meta
     wrapW: 1
+========
+    wrapW: -1
+>>>>>>>> 6eda13344b3ad50d7674cede8ee115287a2ce545:Defense At Waterlands/Assets/_ExternalAssets/RTS Engine/Core/Resources/Images/gamedevspice_logo.png.meta
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -56,12 +62,9 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -125,7 +128,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Server
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -149,7 +152,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

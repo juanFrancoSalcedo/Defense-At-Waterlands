@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Defense At Waterlands/Assets/Level/Scenes/Slection.unity.meta
 guid: 2109549f643e29e49b4f5c8793becdca
+========
+guid: 1e86f9f6ee620d0459b52c4b8b1dee7c
+>>>>>>>> 6eda13344b3ad50d7674cede8ee115287a2ce545:Defense At Waterlands/Assets/Level/Scenes/NavigationAI.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Defense At Waterlands/Assets/Level/Scenes/NavigationAI/NavMesh.asset.meta
 guid: 8f6c04227df1dc447bfbd206bfba7733
 NativeFormatImporter:
+========
+guid: 808422f4da9681649973baf2a3903405
+TextScriptImporter:
+>>>>>>>> 6eda13344b3ad50d7674cede8ee115287a2ce545:Defense At Waterlands/Assets/_ExternalAssets/RTS Engine/Modules/BasicNPC/README.txt.meta
   externalObjects: {}
   mainObjectFileID: 23800000
   userData: 

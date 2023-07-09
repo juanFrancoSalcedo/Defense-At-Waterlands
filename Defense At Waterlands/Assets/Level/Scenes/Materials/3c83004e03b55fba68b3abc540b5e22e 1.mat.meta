@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Defense At Waterlands/Assets/Level/Scenes/Materials/3c83004e03b55fba68b3abc540b5e22e 1.mat.meta
 guid: a50a6eec84c790c4986574621f081174
 NativeFormatImporter:
+========
+guid: 25936a2a46c17ab4b852bd28a5e5c5e0
+TextScriptImporter:
+>>>>>>>> 6eda13344b3ad50d7674cede8ee115287a2ce545:Defense At Waterlands/Assets/_ExternalAssets/RTS Engine/Modules/AdvancedSelection/README.txt.meta
   externalObjects: {}
   mainObjectFileID: 2100000
   userData: 
