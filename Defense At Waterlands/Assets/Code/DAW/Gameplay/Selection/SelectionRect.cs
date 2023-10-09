@@ -4,7 +4,6 @@ namespace DAW.Gameplay
 {
     public static class SelectionRect
     {
-
         public static void SelectUnitsInDraggingBox(Bounds selectionBounds)
         {
             //Bounds selectionBounds = 

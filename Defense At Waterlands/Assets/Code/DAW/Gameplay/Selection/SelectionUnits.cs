@@ -14,17 +14,34 @@ namespace DAW.Gameplay
 
         public static void AddBufferSelection(BaseUnitSelection unit)
         {
-            if(!BufferSelection.Contains(unit))
+            if (!BufferSelection.Contains(unit))
                 BufferSelection.Add(unit);
+            if(unit is MobileUnitSelection)
+                Switch();
         }
         public static void RemoveBufferSelection(BaseUnitSelection unit) => BufferSelection.RemoveAll(r => ReferenceEquals(r, unit));
+
+
+        public static void Switch() 
+        {
+            if(AnyMobile())
+                DeselectBuildings();
+        }
+
+        public static bool AnyMobile() => BufferSelection.Any(s => s is MobileUnitSelection);
+
+        public static void DeselectBuildings() 
+        {
+            var items = BufferSelection.Where(s => s is BuildingUnitSelection);
+            items.ToList().ForEach(s=>s.Deselect());
+        }
+
+
         public static void TurnBufferIntoSelection() 
         {
             var array = new BaseUnitSelection[BufferSelection.Count];
             BufferSelection.CopyTo(array);
             Selection = array.ToList();
-            Selection.ForEach( s => Debug.Log(s.gameObject.name));
-            Debug.Log(BufferSelection.Count);
         }
     }
 

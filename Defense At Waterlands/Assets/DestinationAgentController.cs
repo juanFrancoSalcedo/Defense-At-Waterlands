@@ -21,7 +21,6 @@ namespace DAW.Gameplay
                     model.SetSelectionDestination(target);
                 }
             }
-
         }
     }
 
